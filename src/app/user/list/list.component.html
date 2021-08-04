@@ -1,0 +1,43 @@
+<div class="user">
+    <div class="header">
+        <h2>Users</h2>
+        <div *ngIf="selectedRow">
+            <button mat-raised-button color="primary" class="btn" (click)="onEdit()">
+                Edit
+            </button>
+        </div>
+    </div>
+
+    <table mat-table #table [dataSource]="dataSource" class="table">
+
+        <!-- <ng-container matColumnDef="select">
+            <th mat-header-cell *matHeaderCellDef style="width: 70px;">
+                Selection
+            </th>
+            <td mat-cell *matCellDef="let row">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+                    [checked]="selection.isSelected(row)">
+                </mat-checkbox>
+            </td>
+        </ng-container> -->
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="dg">
+            <th mat-header-cell *matHeaderCellDef> Designation </th>
+            <td mat-cell *matCellDef="let row"> {{row.dg}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+            <th mat-header-cell *matHeaderCellDef> Phone </th>
+            <td mat-cell *matCellDef="let row"> 0{{row.phone}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns; let odd=odd" (click)="onRowClick(row)" [class.odd-row]="odd"
+            [class.selected-row]="selectedRow === row" class="data-row"></tr>
+    </table>
+</div>

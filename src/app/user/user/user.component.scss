@@ -1,0 +1,32 @@
+:host
+{
+    height: 100vh;
+}
+.toolbar
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.content
+{
+    align-items: flex-start;
+    margin-top: 8px;
+    height: calc(100vh - 80px);
+
+    .list
+    {
+        width: 70%;
+        margin: 0 8px;
+        height: calc(100vh - 112px);
+    }
+
+    .form
+    {
+        flex: 1;
+        margin-right: 8px;
+        height: calc(100vh - 112px);
+    }
+}

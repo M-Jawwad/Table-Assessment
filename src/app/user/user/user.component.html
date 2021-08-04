@@ -1,0 +1,15 @@
+<div>
+    <mat-toolbar color="primary" class="toolbar mat-elevation-z4">
+        <h1>User Managment</h1>
+    </mat-toolbar>
+
+    <div class="toolbar content">
+        <mat-card class="mat-elevation-z6 list">
+            <app-user-list [data]="data" (signal)="onTableSignal($event)"></app-user-list>
+        </mat-card>
+
+        <mat-card class="mat-elevation-z6 form">
+            <app-user-form [userData]="formData" [data]="data" (signal)="onFormSignal($event)"></app-user-form>
+        </mat-card>
+    </div>
+</div>

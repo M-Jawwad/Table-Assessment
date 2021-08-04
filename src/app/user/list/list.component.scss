@@ -1,0 +1,43 @@
+.user
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .header
+    {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0 16px 0;
+    }
+
+    h2
+    {
+        margin: 0;
+    }
+
+    .table
+    {
+        width: 100%;
+    }
+
+    .data-row
+    {
+        cursor: pointer;
+    }
+
+    .odd-row
+    {
+        background: #d4d4d4;
+    }
+
+    .selected-row
+    {
+        background: #c2c2c2;
+    }
+}
